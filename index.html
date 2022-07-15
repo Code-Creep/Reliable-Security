@@ -30,14 +30,47 @@
 	  <link rel="stylesheet" href="assets/css/baguetteBox.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    [if lt IE 9]
+    <!--[if lt IE 9]
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    [endif]
+    [endif]-->
 	
 </head>
 
 <body>
+<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "109926308455658");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+	
+<!-- Messanger Chat Plugin Code End -->
+	
     <!-- =============== Preloader =============== -->
     <div id="preloader">
         <div id="loading">
@@ -131,8 +164,8 @@
 					<p>Reliable Security is There for you.</p>
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 wow fadeInRight animated" data-wow-delay=".5s">
-                     <!-- <img src="assets/img/about-img.jpg"/>    Khuliso-->           
-                     <img src="assets/img/khuliso/211.jpg"/>               
+                     <img src="assets/img/about-img.jpg"/>            
+                     <<!--img src="assets/img/khuliso/211.jpg"/> -->              
                   </div>     
             </div>
         </div>   
